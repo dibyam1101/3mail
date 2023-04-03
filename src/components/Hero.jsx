@@ -1,7 +1,7 @@
 import styles from "../style";
-import { discount, robot } from "../../public/assets";
+import robot from "../../public/assets/robot.png"
 import GetStarted from "./GetStarted";
-
+import Image from "next/image";
 const Hero = () => {
   return (
     <section
@@ -26,15 +26,15 @@ const Hero = () => {
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
           Email service.
         </h1>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <p className={`font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5`}>
         By utilizing IPFS, ENS, P2P, and DID at its core, 3MAIL implements a decentralized solution to securely replace centralized email services.
         </p>
       </div>
 
       <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+        className={`flex-1 flex flex justify-center items-center md:my-0 my-10 relative`}
       >
-        <img
+        <Image
           src={robot}
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"

@@ -4,6 +4,7 @@ import styles from "../style";
 import { useMetaMask } from "metamask-react";
 
 const GetStarted = () => {
+  console.log(styles)
   const { status, connect, account, chainId, ethereum } = useMetaMask();
 
   const connectToMetamask = async () => {

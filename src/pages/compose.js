@@ -6,7 +6,7 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import MailHandler from "../abis/MailHandler.json";
 
-const marketplaceAddress = "0x666D09ce23e1c71767b507eEAa28aF9193Ce9b9b";
+const contractAddress = "0xda3fF9C58639dCAc03f9f3cfBD5D851F8564BeeC";
 
 const Compose = () => {
   const [destination, setDestination] = useState("");
@@ -53,12 +53,13 @@ const Compose = () => {
       "https://rpc.ankr.com/eth_goerli"
     );
     const contract = new ethers.Contract(
-      marketplaceAddress,
+      contractAddress,
       MailHandler.abi,
       provider
     );
 
     const publicKey = await contract.getPublicKey(destination);
+    console.log(publicKey)
 
     return publicKey;
   };
@@ -86,7 +87,7 @@ const Compose = () => {
     //   signer
     // );
 
-    // const destinationPublicKey = await getDestinationPublicKey(destination);
+    const destinationPublicKey = await getDestinationPublicKey(destination);
     console.log(content)
     console.log("ENCRYPTEDDATA COMPOSE", encryptedData);
     console.log(account);

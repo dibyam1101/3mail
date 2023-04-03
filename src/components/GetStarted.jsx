@@ -1,17 +1,17 @@
 import styles from "../style";
-import { arrowUp } from "../../public/assets/index";
+import  arrowUp  from "../../public/assets/arrow-up.svg";
 import Link from "next/link";
 import Image from 'next/image'
 
 const GetStarted = () => (
   <Link href="/get-started">
     <div
-      className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
+      className={`flex justify-center items-center w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
     >
       <div
-        className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
+        className={`flex justify-center items-center flex-col bg-primary w-[100%] h-[100%] rounded-full`}
       >
-        <div className={`${styles.flexStart} flex-row`}>
+        <div className={`flex justify-center items-start flex-row`}>
           <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
             <span className="text-gradient">Get</span>
           </p>
